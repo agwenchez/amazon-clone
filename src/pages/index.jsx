@@ -10,7 +10,7 @@ export default function Home({products}) {
         <Header/>
       </Head>
 
-      <main className="mx-auto">
+      <main className="mx-auto overflow-x-hidden">
         <Banner />
         <Products products={products}/>
       </main>
