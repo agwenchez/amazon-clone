@@ -3,7 +3,7 @@ import Banner from "../Components/Banner";
 import Header from "../Components/Header";
 import Products from "../Components/Products";
 
-export default function Home({products}) {
+export default function Home() {
   return (
     <div className="bg-gray-100">
       <Head>
@@ -12,19 +12,19 @@ export default function Home({products}) {
 
       <main className="mx-auto">
         <Banner />
-        <Products products={products}/>
+        <Products/>
       </main>
     </div>
   );
 }
 
-export async function getServerSideProps(context){
-  const products = await fetch('https://fakestoreapi.com/products').then(
-   res => res.json()
-  ).catch(err => console.log("Error", err))
+// export async function getServerSideProps(context){
+//   const products = await fetch('https://fakestoreapi.com/products').then(
+//    res => res.json()
+//   ).catch(err => console.log("Error", err))
 
-  return {
-    props: { products }
-  }
-}
+//   return {
+//     props: { products }
+//   }
+// }
 

@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react'
 import Product from './Product'
 
 
-const Products = ({products}) => {
-    // const [productss, setProductss] = useState([])
+const Products = () => {
+    const [products, setProducts] = useState([])
 
-    // useEffect(() => {
-    //    async function getProducts (){
-    //         const products = await fetch('https://fakestoreapi.com/products').then(
-    //         res => res.json()
-    //         ).catch(err => console.log("Error", err))
+    useEffect(() => {
+       async function getProducts (){
+            const products = await fetch('https://fakestoreapi.com/products').then(
+            res => res.json()
+            ).catch(err => console.log("Error", err))
             
-    //         setProductss(products)
-    //         console.log("Products", products)
-    //    }
-    //    getProducts()
-    // }, [])
+            setProducts(products)
+            // console.log("Products", products)
+       }
+       getProducts()
+    }, [])
     return (
         <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-52 mx-auto">
             {/* <h2>Products</h2> */}
