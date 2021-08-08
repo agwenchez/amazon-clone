@@ -5,12 +5,12 @@ import Products from "../Components/Products";
 
 export default function Home({products}) {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 overflow-x-hidden">
       <Head>
         <Header/>
       </Head>
 
-      <main className="mx-auto overflow-x-hidden">
+      <main className="mx-auto">
         <Banner />
         <Products products={products}/>
       </main>
