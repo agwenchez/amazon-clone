@@ -41,7 +41,7 @@ const Header = () => {
                     </div>
                 </div>
            </div>
-           <div className="bg-yellow-400 flex hover:bg-yellow-500 h-10 rounded-md cursor-pointer sm:hidden  space-x-3">
+           <div className="bg-yellow-400 flex hover:bg-yellow-500 h-10 rounded-md cursor-pointer sm:hidden">
                 <input className="p-2 h-full w-6 flex-grow rounded-l-md focus:outline-none" type="text"/>
                 <SearchIcon className="h-12 p-4"/>
             </div>
