@@ -32,7 +32,7 @@ const Product = ({id, image, title, price, description, category}) => {
            <div className="mb-5">
                 <Currency quantity={price} currency="KES"/>
            </div>
-           <button className="mt-auto button hover:scale-110 hover:shadow-md">Add to Basket</button>
+           <button className="mt-auto button">Add to Basket</button>
         </div>
     )
 }
