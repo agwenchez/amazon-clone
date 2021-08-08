@@ -31,7 +31,7 @@ const Products = ({products}) => {
                 />
             ))}
 
-            <img className="md:col-span-full ml-5 pr-10" src="https://links.papareact.com/dyz" alt="advert" />
+            <img className="md:col-span-full ml-5 pr-10 md:h-screen lg:h-64 w-full rounded-md" src="https://links.papareact.com/dyz" alt="advert" />
 
             {/* <div> */}
                 {products.slice(4,products.length).map(({id, image, title, price, description, category}) =>(
