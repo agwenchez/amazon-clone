@@ -1,5 +1,5 @@
 module.exports = {
-  mode: "jit",
+  // mode: "jit",
   purge: {
     content: ["./src/pages/**/*.{js,jsx,ts,tsx}", "./src/Components/**/*.{js,jsx,ts,tsx}"]
     // "./src/pages/**/*.{js,ts,jsx,tsx}",

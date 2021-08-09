@@ -17,7 +17,7 @@ const Products = ({products}) => {
     //    getProducts()
     // }, [])
     return (
-        <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-52 mx-auto">
+        <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-72 mx-auto">
             {/* <h2>Products</h2> */}
             {products.slice(0,4).map(({id, image, title, price, description, category}) =>(
                 <Product
