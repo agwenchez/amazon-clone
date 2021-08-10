@@ -11,10 +11,9 @@ const MIN_RATING = 1
 const Product = ({id, image, title, price, description, category}) => {
     const [rating] = useState( Math.floor(Math.random() *(MAX_RATING - MIN_RATING + 1)) + MIN_RATING)
     const dispatch = useDispatch()
-    const product = {id, image, title, price, description, category}
+    const product = {id, image, title, price, description, category, rating}
 
     const addItemToBasket = () =>{
-        // console.log("Item to add to basket", product)
         dispatch(addToBasket(product))
     }
 
@@ -22,7 +21,7 @@ const Product = ({id, image, title, price, description, category}) => {
         <div className="relative m-5 bg-white z-30 p-10 rounded-md shadow hover:cursor-pointer hover:shadow-2xl" >
            <p className="top-2 right-2 text-xs italic text-gray-400">{category}</p>
 
-           <div className="flex justify-center rounded-md p-3">
+           <div className="flex justify-center p-3">
              <Image src={image} height={200} width={200} objectFit='contain' loading="lazy"/>
            </div>
 
@@ -41,7 +40,9 @@ const Product = ({id, image, title, price, description, category}) => {
            <div className="mb-5">
                 <Currency quantity={price} currency="KES"/>
            </div>
-           <button onClick={addItemToBasket} className="mt-auto button">Add to Basket</button>
+           <div className="flex ">
+                <button onClick={addItemToBasket} className="mt-auto button">Add to Basket</button>
+           </div>
         </div>
     )
 }
