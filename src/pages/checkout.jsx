@@ -19,7 +19,7 @@ const Checkout = () => {
                     />
 
                     <div className="flex p-5 bg-white space-y-10 flex-col">
-                        <h3 className="text-2xl pb-4">Your shopping basket</h3>
+                        <h3 className="text-3xl pb-4">Your shopping basket</h3>
                     </div>
                 </div>
                 {/* Right side */}

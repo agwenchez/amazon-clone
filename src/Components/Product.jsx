@@ -2,12 +2,20 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { StarIcon } from '@heroicons/react/solid'
 import Currency from 'react-currency-formatter'
+import { useDispatch } from 'react-redux'
+import { addToBasket } from '../slices/basketSlice'
 
 const MAX_RATING = 5
 const MIN_RATING = 1
 
 const Product = ({id, image, title, price, description, category}) => {
     const [rating] = useState( Math.floor(Math.random() *(MAX_RATING - MIN_RATING + 1)) + MIN_RATING)
+    const dispatch = useDispatch()
+    const product = {id, image, title, price, description, category}
+
+    const addItemToBasket = () =>{
+        dispatch(addToBasket(product))
+    }
 
     return (
         <div className="relative m-5 bg-white z-30 p-10 rounded-md shadow hover:cursor-pointer hover:shadow-2xl" >
@@ -32,7 +40,7 @@ const Product = ({id, image, title, price, description, category}) => {
            <div className="mb-5">
                 <Currency quantity={price} currency="KES"/>
            </div>
-           <button className="mt-auto button">Add to Basket</button>
+           <button onClick={addItemToBasket} className="mt-auto button">Add to Basket</button>
         </div>
     )
 }
