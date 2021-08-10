@@ -3,10 +3,13 @@ import Image from 'next/image'
 import { MenuIcon, SearchIcon, ShoppingCartIcon  } from '@heroicons/react/outline'
 import { signIn, signOut, useSession } from 'next-auth/client'
 import { useRouter } from 'next/dist/client/router'
+import { useSelector } from 'react-redux'
+import { selectItems } from '../slices/basketSlice'
 
 const Header = () => {
     const [ session ] = useSession()
     const router = useRouter()
+    const items = useSelector(selectItems)
 
     return (
         <header className="sticky top-0 z-50">
@@ -41,7 +44,7 @@ const Header = () => {
                         <p className="font-extrabold md:text-sm">& Orders</p>
                     </div>
                     <div   onClick={()=> router.push('/checkout')} className="link relative flex items-center">
-                        <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">0</span>
+                        <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">{items.length}</span>
                         <ShoppingCartIcon className="h-10"/>
                         <p className="font-extrabold md:text-sm hidden md:inline mt-2">Basket</p>
                     </div>

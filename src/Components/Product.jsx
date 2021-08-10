@@ -14,6 +14,7 @@ const Product = ({id, image, title, price, description, category}) => {
     const product = {id, image, title, price, description, category}
 
     const addItemToBasket = () =>{
+        // console.log("Item to add to basket", product)
         dispatch(addToBasket(product))
     }
 
