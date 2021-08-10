@@ -7,13 +7,17 @@ export default function Home({products}) {
   return (
     <div className="bg-gray-100 overflow-x-hidden">
       <Head>
-        <Header/>
+        <title>Amazon Clone</title>
       </Head>
+        <Header/>
 
       <main className="mx-auto">
         <Banner />
         <Products products={products}/>
       </main>
+      <footer className="flex bg-amazon_blue text-white p-5 sm:p-8 text-center mx-auto justify-center">
+        <h3>Design by Agwenchez</h3>
+      </footer>
     </div>
   );
 }

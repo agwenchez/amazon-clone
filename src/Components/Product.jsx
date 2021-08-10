@@ -10,10 +10,10 @@ const Product = ({id, image, title, price, description, category}) => {
     const [rating] = useState( Math.floor(Math.random() *(MAX_RATING - MIN_RATING + 1)) + MIN_RATING)
 
     return (
-        <div className="relative m-5 bg-white z-30 p-10 rounded-md shadow hover:cursor-pointer hover:shadow-2xl ">
+        <div className="relative m-5 bg-white z-30 p-10 rounded-md shadow hover:cursor-pointer hover:shadow-2xl" >
            <p className="top-2 right-2 text-xs italic text-gray-400">{category}</p>
 
-           <div className="flex justify-center">
+           <div className="flex justify-center rounded-md p-3">
              <Image src={image} height={200} width={200} objectFit='contain' loading="lazy"/>
            </div>
 
