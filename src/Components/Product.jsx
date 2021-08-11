@@ -22,7 +22,7 @@ const Product = ({id, image, title, price, description, category}) => {
            <p className="top-2 right-2 text-xs italic text-gray-400">{category}</p>
 
            <div className="flex justify-center p-3">
-             <Image src={image} height={200} width={200} objectFit='contain' loading="lazy"/>
+             <Image src={image} height={200} width={200} objectFit='contain' priority/>
            </div>
 
            <h4 className="my-3">{title}</h4>
